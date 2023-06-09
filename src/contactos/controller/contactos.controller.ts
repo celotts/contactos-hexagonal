@@ -13,6 +13,7 @@ import { ContactosService } from '../services/contactos.service';
 @Controller('contactos')
 export class ContactosController {
   constructor(private readonly contactosService: ContactosService) {}
+
   @Get()
   async getAllContactos(): Promise<Contactos[]> {
     return await this.contactosService.obtenerContactos();
